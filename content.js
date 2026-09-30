@@ -30,10 +30,10 @@ const laLunaOne = {
     { title: "Care at Home", description: "A calm, sensory product world for packaging, retail and campaign application.", image: "assets/la-luna-laundry-scene.png" }
   ],
   lifestyle: [
-    { title: "The Linen Moment", description: "Fresh fabric, gently held close.", image: "assets/la-luna-linen-moment.png" },
-    { title: "Softness That Stays", description: "Comfort that follows you into the evening.", image: "assets/la-luna-sleeping.png" },
-    { title: "Made for the Laundry Room", description: "Care, within reach when it matters.", image: "assets/la-luna-laundry-placement.png" },
-    { title: "Placed with Purpose", description: "A considered product moment in the laundry space.", image: "assets/la-luna-bedroom-placement.png" }
+    { title: "The Linen Moment", description: "Fresh fabric, gently held close.", image: "la-luna-linen-moment.png" },
+    { title: "Softness That Stays", description: "Comfort that follows you into the evening.", image: "la-luna-sleeping.png" },
+    { title: "Made for the Laundry Room", description: "Care, within reach when it matters.", image: "la-luna-laundry-placement.png" },
+    { title: "Placed with Purpose", description: "A considered product moment in the laundry space.", image: "la-luna-bedroom-placement.png" }
   ],
   downloads: [
     { label: "Primary logo", file: "#", note: "Add SVG / PNG" },
