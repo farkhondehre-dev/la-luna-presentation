@@ -25,9 +25,9 @@ const laLunaOne = {
     note: "A refined editorial serif balanced with a calm, modern sans serif."
   },
   applications: [
-    { title: "Moonlit Clean", description: "Liquid laundry detergent. A soft white bottle with a crescent-led form language.", image: "assets/la-luna-detergent.png" },
-    { title: "Softness in Bloom", description: "Fabric softener. Lavender, silver and delicate florals make care feel elevated.", image: "assets/la-luna-softener.png" },
-    { title: "Care at Home", description: "A calm, sensory product world for packaging, retail and campaign application.", image: "assets/la-luna-laundry-scene.png" }
+    { title: "Moonlit Clean", description: "Liquid laundry detergent. A soft white bottle with a crescent-led form language.", image: "la-luna-detergent.png" },
+    { title: "Softness in Bloom", description: "Fabric softener. Lavender, silver and delicate florals make care feel elevated.", image: "la-luna-softener.png" },
+    { title: "Care at Home", description: "A calm, sensory product world for packaging, retail and campaign application.", image: "la-luna-laundry-scene.png" }
   ],
   lifestyle: [
     { title: "The Linen Moment", description: "Fresh fabric, gently held close.", image: "la-luna-linen-moment.png" },
