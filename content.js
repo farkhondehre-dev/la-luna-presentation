@@ -40,11 +40,6 @@ const laLunaOne = {
         { name: "Cyrillic lockup", file: "d01-cyrillic-lockup.svg" },
         { name: "Latin lockup", file: "d01-latin-lockup.svg" }
       ]
-    },
-    arc: {
-      title: "The lunar arc",
-      description: "Add the concept behind the arc: its role, character and symbolism within the identity here.",
-      mark: { name: "Lunar arc", file: "d01-arc.svg" }
     }
   },
   applications: [

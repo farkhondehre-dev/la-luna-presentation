@@ -17,9 +17,8 @@ $("typeNote").textContent = c.typography.note;
 $("referenceTypes").textContent = `${c.typography.display} / ${c.typography.body}`;
 const logoSection = document.querySelector(".logo-system");
 if (c.logoSystem) {
-  const logoGroup = (group) => `<div class="logo-group"><div class="logo-group-copy"><h2>${group.title}</h2><p>${group.description}</p></div><div class="logo-grid">${group.marks.map((mark) => `<figure class="logo-card"><div class="logo-art"><img src="${mark.file}" alt="La Luna ${mark.name}" /></div><figcaption>${mark.name}</figcaption></figure>`).join("")}</div></div>`;
-  const arc = c.logoSystem.arc;
-  $("logoSystem").innerHTML = `${logoGroup(c.logoSystem.wordmarks)}${logoGroup(c.logoSystem.lockups)}<div class="logo-group arc-group"><div class="logo-group-copy"><h2>${arc.title}</h2><p>${arc.description}</p></div><figure class="logo-card arc-card"><div class="logo-art"><img src="${arc.mark.file}" alt="La Luna ${arc.mark.name}" /></div><figcaption>${arc.mark.name}</figcaption></figure></div>`;
+  const logoGroup = (group) => `<div class="logo-group"><div class="logo-group-copy"><h2>${group.title}</h2><p>${group.description}</p></div><div class="logo-grid">${group.marks.map((mark) => `<figure class="logo-card"><div class="logo-art"><img src="${mark.file}" alt="La Luna ${mark.name}" /></div></figure>`).join("")}</div></div>`;
+  $("logoSystem").innerHTML = `${logoGroup(c.logoSystem.wordmarks)}${logoGroup(c.logoSystem.lockups)}`;
   logoSection.hidden = false;
 }
 const toast = document.querySelector(".toast");
