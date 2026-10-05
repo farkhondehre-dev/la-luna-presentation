@@ -91,15 +91,15 @@ laLunaTwo.colors = [
   { name: "Eclipse Navy", hex: "#1D2055", usage: "Depth, trust & the eclipse", group: "primary" },
   { name: "Moon White", hex: "#F7F5F0", usage: "Light expression & clean contrast", group: "primary" },
   { name: "Halo Gold", hex: "#E7B968", usage: "Eclipse light · accent only", group: "primary" },
-  { name: "Moon Grey", hex: "#D5D6D8", usage: "Minimal, neutral eclipse", group: "secondary" },
+  { name: "Moon Grey", hex: "#D5D6D8", usage: "Minimal, neutral eclipse", group: "primary" },
   { name: "Dusk Lavender", hex: "#B8B3D0", usage: "Softness & fabric care", group: "secondary" },
   { name: "Mist Blue", hex: "#AABFD2", usage: "Freshness & clean care", group: "secondary" },
   { name: "Soft Stone", hex: "#DDD6CB", usage: "Warmth & tactile quality", group: "secondary" }
 ];
 laLunaTwo.colourLanguage = {
   title: "Protection, expressed through colour.",
-  primary: "Eclipse Navy brings depth and trust. Moon White keeps the light expression clean, while Halo Gold introduces eclipse light as a restrained accent.",
-  secondary: "Moon Grey, Dusk Lavender, Mist Blue and Soft Stone add neutrality, softness, freshness and warmth to the fabric-care identity."
+  primary: "Eclipse Navy brings depth and trust. Moon White keeps the light expression clean, Moon Grey adds a minimal, neutral eclipse treatment, and Halo Gold introduces eclipse light as a restrained accent.",
+  secondary: "Dusk Lavender, Mist Blue and Soft Stone add softness, freshness and warmth to the fabric-care identity."
 };
 laLunaTwo.logoSystem = {
   wordmarks: {

@@ -38,8 +38,8 @@ body h3{font-size:1rem!important;}
 .download-content{align-items:start;}
 .reference-type{font-size:1.25rem;}
 body[data-version="2"]{--ink:#1D2055;--cream:#F7F5F0;--lav:#B8B3D0;--blue:#AABFD2;--silver:#D5D6D8;--line:rgba(29,32,85,.17);}
-body[data-version="2"] .palette-language-group:last-child .swatches{grid-template-columns:repeat(4,minmax(0,1fr));}
-@media(max-width:720px){body[data-version="2"] .palette-language-group:last-child .swatches{grid-template-columns:1fr;}}
+body[data-version="2"] .palette-language-group:first-child .swatches{grid-template-columns:repeat(4,minmax(0,1fr));}
+@media(max-width:720px){body[data-version="2"] .palette-language-group:first-child .swatches{grid-template-columns:1fr;}}
 @media(hover:hover) and (pointer:fine){.application-card:hover img,.lifestyle-card:hover img{transform:scale(1.035)}}
 @media(prefers-reduced-motion:reduce){.application-card img,.lifestyle-card img{transition:none}.application-card:hover img,.lifestyle-card:hover img{transform:scale(1)}}
 @media(max-width:720px){.section{padding:3.5rem 6vw}.logo-group{grid-template-columns:1fr;gap:2.5rem;padding:3rem 0}.logo-group-copy p{max-width:100%}.logo-grid{grid-template-columns:1fr;gap:3rem}.logo-art{min-height:0}.logo-art img{max-width:540px!important}.application-grid{grid-template-columns:1fr}.application-card{height:auto;min-height:0}.lifestyle-card{height:350px;min-height:350px}.hero{min-height:580px}.lifestyle-grid{gap:1rem}}
