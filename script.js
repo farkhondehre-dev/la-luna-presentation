@@ -15,6 +15,13 @@ $("concept").textContent = c.concept;
 $("typeNames").textContent = `${c.typography.display} + ${c.typography.body}`;
 $("typeNote").textContent = c.typography.note;
 $("referenceTypes").textContent = `${c.typography.display} / ${c.typography.body}`;
+const logoSection = document.querySelector(".logo-system");
+if (c.logoSystem) {
+  const logoGroup = (group) => `<div class="logo-group"><div class="logo-group-copy"><h2>${group.title}</h2><p>${group.description}</p></div><div class="logo-grid">${group.marks.map((mark) => `<figure class="logo-card"><div class="logo-art"><img src="${mark.file}" alt="La Luna ${mark.name}" /></div><figcaption>${mark.name}</figcaption></figure>`).join("")}</div></div>`;
+  const arc = c.logoSystem.arc;
+  $("logoSystem").innerHTML = `${logoGroup(c.logoSystem.wordmarks)}${logoGroup(c.logoSystem.lockups)}<div class="logo-group arc-group"><div class="logo-group-copy"><h2>${arc.title}</h2><p>${arc.description}</p></div><figure class="logo-card arc-card"><div class="logo-art"><img src="${arc.mark.file}" alt="La Luna ${arc.mark.name}" /></div><figcaption>${arc.mark.name}</figcaption></figure></div>`;
+  logoSection.hidden = false;
+}
 const toast = document.querySelector(".toast");
 const copy = async (hex) => { try { await navigator.clipboard.writeText(hex); toast.textContent = `${hex} copied`; toast.classList.add("show"); setTimeout(() => toast.classList.remove("show"), 1800); } catch { toast.textContent = hex; toast.classList.add("show"); } };
 const swatchMarkup = (color) => `<button class="swatch" style="--swatch:${color.hex}" data-hex="${color.hex}" type="button"><span class="colour"></span><span class="swatch-detail"><b>${color.name}</b><span>${color.hex}</span><small>${color.usage}</small></span></button>`;

@@ -24,6 +24,29 @@ const laLunaOne = {
     body: "Manrope",
     note: "A refined editorial serif balanced with a calm, modern sans serif."
   },
+  logoSystem: {
+    wordmarks: {
+      title: "The wordmarks",
+      description: "Add the thinking behind the Latin and Cyrillic wordmarks here.",
+      marks: [
+        { name: "Cyrillic wordmark", file: "d01-wordmark-cyrillic.svg" },
+        { name: "Latin wordmark", file: "d01-wordmark-latin.svg" }
+      ]
+    },
+    lockups: {
+      title: "Wordmark & arc",
+      description: "Add the rationale for the complete logo lockups and their use across the brand here.",
+      marks: [
+        { name: "Cyrillic lockup", file: "d01-cyrillic-lockup.svg" },
+        { name: "Latin lockup", file: "d01-latin-lockup.svg" }
+      ]
+    },
+    arc: {
+      title: "The lunar arc",
+      description: "Add the concept behind the arc: its role, character and symbolism within the identity here.",
+      mark: { name: "Lunar arc", file: "d01-arc.svg" }
+    }
+  },
   applications: [
     { title: "Moonlit Clean", description: "Liquid laundry detergent. A soft white bottle with a crescent-led form language.", image: "la-luna-detergent.png" },
     { title: "Softness in Bloom", description: "Fabric softener. Lavender, silver and delicate florals make care feel elevated.", image: "la-luna-softener.png" },
@@ -62,6 +85,7 @@ laLunaTwo.colors = [
   { name: "Pale Silver", hex: "#D8DCE1", usage: "Secondary neutral" },
   { name: "Deep Evening", hex: "#303A52", usage: "Typography & contrast" }
 ];
+laLunaTwo.logoSystem = null;
 
 const laLunaThree = clonePresentation(laLunaOne);
 laLunaThree.presentationLabel = "Logo presentation · 03";
@@ -77,6 +101,7 @@ laLunaThree.colors = [
   { name: "Silver Glow", hex: "#C9D0DA", usage: "Secondary neutral" },
   { name: "Night Blue", hex: "#1E3049", usage: "Typography & contrast" }
 ];
+laLunaThree.logoSystem = null;
 
 window.brandContent = laLunaOne;
 window.brandPresentations = { "1": laLunaOne, "2": laLunaTwo, "3": laLunaThree };
