@@ -9,33 +9,47 @@ const laLunaOne = {
   nativeName: "ЛА ЛУНА",
   tagline: "Care Beyond Clean",
   intro: "Specialist fabric care with a softer point of view.",
-  positioning: "La Luna brings thoughtful fabric care into a more emotional, elevated space. It pairs reliable performance with the quiet reassurance of softness, light and lasting comfort.",
-  conceptTitle: "A ritual of care, lit by the moon.",
-  concept: "The name suggests calm, tenderness and a subtle European sensibility. The identity should feel polished enough for the shelf, yet gentle enough to live in the home.",
+  conceptLabel: "CORE CONCEPT",
+  positioning: "The logo balances precision with softness, reflecting effective yet gentle fabric care.",
+  conceptTitle: "Refined Expertise",
+  concept: "Its flowing curves echo the natural movement and folds of fabric, bringing softness and tactility to a confident, expert identity.",
   colors: [
-    { name: "Moonlit Blue", hex: "#8EA5C8", usage: "Primary brand colour" },
-    { name: "Soft Lavender", hex: "#C9C4DC", usage: "Gentle accent" },
-    { name: "Warm Cream", hex: "#F5F0E7", usage: "Base surface" },
-    { name: "Silver Mist", hex: "#C7CCD4", usage: "Secondary neutral" },
-    { name: "Midnight Ink", hex: "#253044", usage: "Typography & contrast" }
+    { name: "Midnight Navy", hex: "#18213D", usage: "Primary", group: "primary" },
+    { name: "Moonlight Blue", hex: "#AFC9DB", usage: "Primary", group: "primary" },
+    { name: "Warm White", hex: "#F6F4EF", usage: "Primary", group: "primary" },
+    { name: "Soft Lavender", hex: "#CBC6D8", usage: "Secondary", group: "secondary" },
+    { name: "Soft Cream", hex: "#EAE4D8", usage: "Secondary", group: "secondary" },
+    { name: "Silver Grey", hex: "#C5C7C9", usage: "Secondary", group: "secondary" }
   ],
+  colourLanguage: {
+    title: "Softness with authority.",
+    primary: "Balances confidence, care and calm, creating a foundation that feels both expert and gentle.",
+    secondary: "Adds warmth, softness and flexibility, allowing the identity to expand across products while staying consistent."
+  },
   typography: {
-    display: "Cormorant Garamond",
-    body: "Manrope",
-    note: "A refined editorial serif balanced with a calm, modern sans serif."
+    display: "Georgia",
+    body: "Gotham",
+    title: "Character with clarity.",
+    georgiaLead: "Warm. Familiar. Refined.",
+    georgiaDescription: "Georgia’s expressive serifs and generous proportions bring warmth to the identity. Used for headlines, it gives La Luna a confident voice with a gentle character.",
+    gothamLead: "Clear. Balanced. Practical.",
+    gothamDescription: "Gotham’s geometric forms provide a clean counterpoint to Georgia. Used for product information and supporting copy, it creates a clear hierarchy and keeps communication direct.",
+    note: "Georgia adds character; Gotham brings structure. Together, they balance softness with fabric-care expertise."
   },
   logoSystem: {
     wordmarks: {
-      title: "The wordmarks",
-      description: "Add the thinking behind the Latin and Cyrillic wordmarks here.",
+      title: "LOGOMARK",
+      subtitle: "Refined. Distinctive. Confident.",
+      description: "A custom wordmark designed to balance fabric-care expertise with softness, creating a sophisticated identity without entering beauty or fashion territory.",
       marks: [
         { name: "Cyrillic wordmark", file: "d01-wordmark-cyrillic.svg" },
         { name: "Latin wordmark", file: "d01-wordmark-latin.svg" }
       ]
     },
     lockups: {
-      title: "Wordmark & arc",
-      description: "Add the rationale for the complete logo lockups and their use across the brand here.",
+      title: "LOGOMARK & ARC",
+      subtitle: "A controlled lunar cue.",
+      description: "The Arc connects La Luna to its lunar meaning without using a literal moon symbol, adding recognition while keeping the identity refined and credible.",
       marks: [
         { name: "Cyrillic lockup", file: "d01-cyrillic-lockup.svg" },
         { name: "Latin lockup", file: "d01-latin-lockup.svg" }
