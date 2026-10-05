@@ -82,20 +82,51 @@ const laLunaOne = {
 const clonePresentation = (content) => JSON.parse(JSON.stringify(content));
 const laLunaTwo = clonePresentation(laLunaOne);
 laLunaTwo.presentationLabel = "Logo presentation · 02";
-laLunaTwo.tagline = "Care, in its softest form.";
-laLunaTwo.intro = "A warm, tactile direction for specialist fabric care.";
-laLunaTwo.positioning = "This direction lets La Luna feel more tactile and intimate, balancing dependable performance with a gently expressive everyday ritual.";
-laLunaTwo.conceptTitle = "Care, softened into a daily ritual.";
-laLunaTwo.concept = "Use this area to describe the second logo direction: its idea, personality and the distinctive choices behind it.";
+laLunaTwo.tagline = "Care Beyond Clean";
+laLunaTwo.intro = "Specialist fabric care with a softer point of view.";
+laLunaTwo.positioning = "Inspired by an eclipse, the circular form surrounds the wordmark like a protective layer around fabric.";
+laLunaTwo.conceptTitle = "Protective Care";
+laLunaTwo.concept = "The concept transforms the lunar reference into a symbol of protection, complete care and softness, creating a more immersive and emotional expression of La Luna.";
 laLunaTwo.colors = [
-  { name: "Dusk Blue", hex: "#7790B5", usage: "Primary brand colour" },
-  { name: "Lilac Haze", hex: "#B9B1D2", usage: "Gentle accent" },
-  { name: "Porcelain", hex: "#F7F4EF", usage: "Base surface" },
-  { name: "Pale Silver", hex: "#D8DCE1", usage: "Secondary neutral" },
-  { name: "Deep Evening", hex: "#303A52", usage: "Typography & contrast" }
+  { name: "Eclipse Navy", hex: "#1D2055", usage: "Depth, trust & the eclipse", group: "primary" },
+  { name: "Moon White", hex: "#F7F5F0", usage: "Light expression & clean contrast", group: "primary" },
+  { name: "Halo Gold", hex: "#E7B968", usage: "Eclipse light · accent only", group: "primary" },
+  { name: "Moon Grey", hex: "#D5D6D8", usage: "Minimal, neutral eclipse", group: "secondary" },
+  { name: "Dusk Lavender", hex: "#B8B3D0", usage: "Softness & fabric care", group: "secondary" },
+  { name: "Mist Blue", hex: "#AABFD2", usage: "Freshness & clean care", group: "secondary" },
+  { name: "Soft Stone", hex: "#DDD6CB", usage: "Warmth & tactile quality", group: "secondary" }
 ];
-laLunaTwo.logoSystem = null;
-laLunaTwo.downloads = [];
+laLunaTwo.colourLanguage = {
+  title: "Protection, expressed through colour.",
+  primary: "Eclipse Navy brings depth and trust. Moon White keeps the light expression clean, while Halo Gold introduces eclipse light as a restrained accent.",
+  secondary: "Moon Grey, Dusk Lavender, Mist Blue and Soft Stone add neutrality, softness, freshness and warmth to the fabric-care identity."
+};
+laLunaTwo.logoSystem = {
+  wordmarks: {
+    title: "LIGHT EXPRESSION",
+    subtitle: "Quiet Protection",
+    description: "The open eclipse creates a sense of gentle protection around the wordmark, while the light treatment keeps the identity clean, calm and suitable for everyday fabric care.",
+    marks: [
+      { name: "Light expression · Cyrillic", file: "LaLuna_D02_Light_Cyrillic.svg" },
+      { name: "Light expression · Latin", file: "LaLuna_D02_Light_Latin.svg" }
+    ]
+  },
+  lockups: {
+    title: "DARK EXPRESSION",
+    subtitle: "Protective Glow",
+    description: "The dark expression brings the eclipse concept to life through light and contrast. The glow surrounding the form suggests a protective aura — giving fabric care a more emotional, sensory expression.",
+    marks: [
+      { name: "Dark expression · Cyrillic", file: "LaLuna_D02_Dark_Cyrillic.png" },
+      { name: "Dark expression · Latin", file: "LaLuna_D02_Dark_Latin.png" }
+    ]
+  }
+};
+laLunaTwo.downloads = [
+  { label: "Light expression · Cyrillic", file: "LaLuna_D02_Light_Cyrillic.pdf", note: "PDF" },
+  { label: "Light expression · Latin", file: "LaLuna_D02_Light_Latin.pdf", note: "PDF" },
+  { label: "Dark expression · Cyrillic", file: "LaLuna_D02_Dark_Cyrillic.pdf", note: "PDF" },
+  { label: "Dark expression · Latin", file: "LaLuna_D02_Dark_Latin.pdf", note: "PDF" }
+];
 
 const laLunaThree = clonePresentation(laLunaOne);
 laLunaThree.presentationLabel = "Logo presentation · 03";

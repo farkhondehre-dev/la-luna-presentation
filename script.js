@@ -1,6 +1,7 @@
 const requestedVersion = new URLSearchParams(window.location.search).get("version") || "1";
 const version = window.brandPresentations?.[requestedVersion] ? requestedVersion : "1";
 const c = window.brandPresentations?.[version] || window.brandContent;
+document.body.dataset.version = version;
 const $ = (id) => document.getElementById(id);
 document.title = `${c.name} — ${c.presentationLabel} | Brand Presentation`;
 $("presentationLabel").textContent = c.presentationLabel;
@@ -8,18 +9,18 @@ document.querySelectorAll("[data-version]").forEach((link) => link.classList.tog
 $("brandName").textContent = c.name;
 if ($("nativeName")) {
   $("nativeName").textContent = c.nativeName;
-  $("nativeName").hidden = version === "1";
+  $("nativeName").hidden = version === "1" || version === "2";
 }
 $("tagline").textContent = c.tagline;
 $("intro").textContent = c.intro;
 $("positioning").textContent = c.positioning;
 $("conceptTitle").textContent = c.conceptTitle;
 $("concept").textContent = c.concept;
-if (version === "1" && c.conceptLabel) document.querySelector(".story .eyebrow").textContent = c.conceptLabel;
+if (c.conceptLabel) document.querySelector(".story .eyebrow").textContent = c.conceptLabel;
 $("typeNames").textContent = `${c.typography.display} + ${c.typography.body}`;
 $("typeNote").textContent = c.typography.note;
 $("referenceTypes").textContent = `${c.typography.display} / ${c.typography.body}`;
-if (version === "1" && c.typography.title) {
+if ((version === "1" || version === "2") && c.typography.title) {
   const typeSection = document.querySelector(".type-section");
   typeSection.querySelector(".eyebrow").textContent = "TYPOGRAPHY";
   typeSection.querySelector(".type-card").outerHTML = `<div class="brand-type-layout"><h2>${c.typography.title}</h2><div class="brand-type-grid"><article><h3>GEORGIA</h3><p class="brand-type-sample georgia-specimen">Aa Bb Cc</p><p><strong>${c.typography.georgiaLead}</strong></p><p>${c.typography.georgiaDescription}</p></article><article><h3>GOTHAM</h3><p class="brand-type-sample gotham-specimen">Aa Bb Cc</p><p><strong>${c.typography.gothamLead}</strong></p><p>${c.typography.gothamDescription}</p></article></div><div class="brand-type-pairing"><h3>THE PAIRING</h3><p>${c.typography.note}</p></div></div>`;
@@ -37,7 +38,7 @@ const toast = document.querySelector(".toast");
 const swatchMarkup = (color) => `<div class="swatch" style="--swatch:${color.hex}"><span class="colour"></span><span class="swatch-detail"><b>${color.name}</b><span>${color.hex}</span><small>${color.usage}</small></span></div>`;
 document.querySelector(".palette .section-heading p").remove();
 $("swatches").innerHTML = c.colors.map(swatchMarkup).join("");
-if (version === "1" && c.colourLanguage) {
+if ((version === "1" || version === "2") && c.colourLanguage) {
   const palette = document.querySelector(".palette");
   palette.querySelector(".eyebrow").textContent = "COLOUR LANGUAGE";
   palette.querySelector(".section-heading h2").textContent = c.colourLanguage.title;
