@@ -39,6 +39,8 @@ body h3{font-size:1rem!important;}
 .reference-type{font-size:1.25rem;}
 body[data-version="2"]{--ink:#1D2055;--cream:#F7F5F0;--lav:#B8B3D0;--blue:#AABFD2;--silver:#D5D6D8;--line:rgba(29,32,85,.17);}
 body[data-version="2"] .palette-language-group:first-child .swatches{grid-template-columns:repeat(4,minmax(0,1fr));}
+body[data-version="2"] .lifestyle-1 img{object-position:center top;}
+body[data-version="2"] .lifestyle-3 img{object-position:center 30%;}
 @media(max-width:720px){body[data-version="2"] .palette-language-group:first-child .swatches{grid-template-columns:1fr;}}
 @media(hover:hover) and (pointer:fine){.application-card:hover img,.lifestyle-card:hover img{transform:scale(1.035)}}
 @media(prefers-reduced-motion:reduce){.application-card img,.lifestyle-card img{transition:none}.application-card:hover img,.lifestyle-card:hover img{transform:scale(1)}}

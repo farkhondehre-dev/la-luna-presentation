@@ -121,6 +121,17 @@ laLunaTwo.logoSystem = {
     ]
   }
 };
+laLunaTwo.applications = [
+  { title: "Quiet Protection", description: "White laundry detergent with the light eclipse expression: clean, calm and confident.", image: "d02-detergent.png" },
+  { title: "Protective Glow", description: "Eclipse Navy fabric softener with a luminous halo: an immersive expression of softness and care.", image: "d02-softener.png" },
+  { title: "Complete Care", description: "Two complementary expressions, united by protective fabric care.", image: "d02-care-at-home.png" }
+];
+laLunaTwo.lifestyle = [
+  { title: "A Fresh Embrace", description: "The quiet pleasure of freshly cared-for fabric.", image: "d02-linen-moment.png" },
+  { title: "Wrapped in Softness", description: "Gentle comfort that surrounds you.", image: "d02-sleeping.png" },
+  { title: "Everyday Protection", description: "Confident care, at the heart of the laundry routine.", image: "d02-laundry-placement.png" },
+  { title: "Care Within Reach", description: "Softness, ready for the next wash.", image: "d02-shelf-placement.png" }
+];
 laLunaTwo.downloads = [
   { label: "Light expression · Cyrillic", file: "LaLuna_D02_Light_Cyrillic.pdf", note: "PDF" },
   { label: "Light expression · Latin", file: "LaLuna_D02_Light_Latin.pdf", note: "PDF" },
