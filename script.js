@@ -20,10 +20,6 @@ $("typeNames").textContent = `${c.typography.display} + ${c.typography.body}`;
 $("typeNote").textContent = c.typography.note;
 $("referenceTypes").textContent = `${c.typography.display} / ${c.typography.body}`;
 if (version === "1" && c.typography.title) {
-  const fontStyles = document.createElement("link");
-  fontStyles.rel = "stylesheet";
-  fontStyles.href = "fonts.css";
-  document.head.appendChild(fontStyles);
   const typeSection = document.querySelector(".type-section");
   typeSection.querySelector(".eyebrow").textContent = "TYPOGRAPHY";
   typeSection.querySelector(".type-card").outerHTML = `<div class="brand-type-layout"><h2>${c.typography.title}</h2><div class="brand-type-grid"><article><h3>GEORGIA</h3><p class="brand-type-sample georgia-specimen">Aa Bb Cc</p><p><strong>${c.typography.georgiaLead}</strong></p><p>${c.typography.georgiaDescription}</p></article><article><h3>GOTHAM</h3><p class="brand-type-sample gotham-specimen">Aa Bb Cc</p><p><strong>${c.typography.gothamLead}</strong></p><p>${c.typography.gothamDescription}</p></article></div><div class="brand-type-pairing"><h3>THE PAIRING</h3><p>${c.typography.note}</p></div></div>`;
@@ -38,8 +34,8 @@ if (c.logoSystem) {
   logoSection.hidden = false;
 }
 const toast = document.querySelector(".toast");
-const copy = async (hex) => { try { await navigator.clipboard.writeText(hex); toast.textContent = `${hex} copied`; toast.classList.add("show"); setTimeout(() => toast.classList.remove("show"), 1800); } catch { toast.textContent = hex; toast.classList.add("show"); } };
-const swatchMarkup = (color) => `<button class="swatch" style="--swatch:${color.hex}" data-hex="${color.hex}" type="button"><span class="colour"></span><span class="swatch-detail"><b>${color.name}</b><span>${color.hex}</span><small>${color.usage}</small></span></button>`;
+const swatchMarkup = (color) => `<div class="swatch" style="--swatch:${color.hex}"><span class="colour"></span><span class="swatch-detail"><b>${color.name}</b><span>${color.hex}</span><small>${color.usage}</small></span></div>`;
+document.querySelector(".palette .section-heading p").remove();
 $("swatches").innerHTML = c.colors.map(swatchMarkup).join("");
 if (version === "1" && c.colourLanguage) {
   const palette = document.querySelector(".palette");
@@ -53,10 +49,9 @@ if (version === "1" && c.colourLanguage) {
   document.head.appendChild(paletteStyle);
 }
 $("referenceSwatches").innerHTML = c.colors.map(swatchMarkup).join("");
-document.querySelectorAll("[data-hex]").forEach((item) => item.addEventListener("click", () => copy(item.dataset.hex)));
 $("applicationGrid").innerHTML = c.applications.map((a, index) => `<article class="application-card card-${index + 1}"><img src="${a.image}" alt="La Luna ${a.title} mockup" /><div class="application-copy"><h3>${a.title}</h3><p>${a.description}</p></div></article>`).join("");
 $("lifestyleGrid").innerHTML = c.lifestyle.map((item, index) => `<article class="lifestyle-card lifestyle-${index + 1}"><img src="${item.image}" alt="La Luna lifestyle: ${item.title}" /><div><span>0${index + 1}</span><h3>${item.title}</h3><p>${item.description}</p></div></article>`).join("");
-$("downloadList").innerHTML = c.downloads.map((d) => `<a class="download" href="${d.file}"><span><b>${d.label}</b><small>${d.note}</small></span><span>Download</span></a>`).join("");
+$("downloadList").innerHTML = c.downloads.filter(d => d.file && d.file !== "#").map((d) => `<a class="download" href="${d.file}" download><span><b>${d.label}</b><small>${d.note}</small></span><span>Download PDF</span></a>`).join("");
 const reference = document.querySelector(".reference");
 document.querySelector(".reference-toggle").addEventListener("click", () => { reference.classList.add("open"); reference.setAttribute("aria-hidden", "false"); });
 document.querySelector(".close-reference").addEventListener("click", () => { reference.classList.remove("open"); reference.setAttribute("aria-hidden", "true"); });

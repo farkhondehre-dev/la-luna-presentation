@@ -68,8 +68,8 @@ const laLunaOne = {
     { title: "Placed with Purpose", description: "A considered product moment in the laundry space.", image: "la-luna-bedroom-placement.png" }
   ],
   downloads: [
-    { label: "Primary logo", file: "#", note: "Add SVG / PNG" },
-    { label: "Brand assets", file: "#", note: "Add ZIP folder" }
+    { label: "Cyrillic logo", file: "LaLuna_D01_Cyrillic.pdf", note: "PDF" },
+    { label: "Latin logo", file: "LaLuna_D01_Latin.pdf", note: "PDF" }
   ]
 };
 
@@ -95,6 +95,7 @@ laLunaTwo.colors = [
   { name: "Deep Evening", hex: "#303A52", usage: "Typography & contrast" }
 ];
 laLunaTwo.logoSystem = null;
+laLunaTwo.downloads = [];
 
 const laLunaThree = clonePresentation(laLunaOne);
 laLunaThree.presentationLabel = "Logo presentation · 03";
@@ -111,6 +112,7 @@ laLunaThree.colors = [
   { name: "Night Blue", hex: "#1E3049", usage: "Typography & contrast" }
 ];
 laLunaThree.logoSystem = null;
+laLunaThree.downloads = [];
 
 window.brandContent = laLunaOne;
 window.brandPresentations = { "1": laLunaOne, "2": laLunaTwo, "3": laLunaThree };
